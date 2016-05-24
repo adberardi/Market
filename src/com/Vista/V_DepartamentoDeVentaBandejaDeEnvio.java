@@ -15,13 +15,13 @@ import javax.swing.border.EmptyBorder;
 
 public class V_DepartamentoDeVentaBandejaDeEnvio extends JFrame {
 
-	private JPanel contentPane;
-	private JButton btnNewButton;
-	private JButton btnResponder;
-	private JTable table;
-	private JTextField textField_1;
-	private JLabel label;
-	private JTextField textField;
+	public JPanel contentPane;
+	public JButton btnNewButton;
+	public JButton btnResponder;
+	public JTable table;
+	public JTextField textField_1;
+	public JLabel label;
+	public JTextField textField;
 
 	/**
 	 * Launch the application.
