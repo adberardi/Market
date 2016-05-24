@@ -8,10 +8,15 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
 
 public class V_Principal extends JFrame {
 
 	public JPanel contentPane;
+	private JTextField txtUsuario;
+	private JTextField txtContrasea;
+	private JButton button;
 
 	/**
 	 * Launch the application.
@@ -34,5 +39,25 @@ public class V_Principal extends JFrame {
 		lblMarketVenezuela.setBackground(Color.WHITE);
 		lblMarketVenezuela.setBounds(156, 12, 147, 15);
 		contentPane.add(lblMarketVenezuela);
+		
+		txtUsuario = new JTextField();
+		txtUsuario.setText("Usuario");
+		txtUsuario.setBounds(142, 60, 161, 19);
+		contentPane.add(txtUsuario);
+		txtUsuario.setColumns(10);
+		
+		txtContrasea = new JTextField();
+		txtContrasea.setText("Contraseña");
+		txtContrasea.setBounds(142, 117, 161, 19);
+		contentPane.add(txtContrasea);
+		txtContrasea.setColumns(10);
+		
+		JButton btnIngresar = new JButton("Ingresar");
+		btnIngresar.setBounds(42, 192, 117, 25);
+		contentPane.add(btnIngresar);
+		
+		button = new JButton("New button");
+		button.setBounds(279, 192, 117, 25);
+		contentPane.add(button);
 	}
 }
