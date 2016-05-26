@@ -35,8 +35,8 @@ public class V_DepartamentoDeVentaBandejaDeEnvio extends JFrame {
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
 		
 		
 		textField = new JTextField();
@@ -64,7 +64,7 @@ public class V_DepartamentoDeVentaBandejaDeEnvio extends JFrame {
 		contentPane.add(btnResponder);
 		
 		btnNewButton = new JButton("Cancelar");
-		btnNewButton.setBounds(297, 242, 89, 23);
+		btnNewButton.setBounds(5, 5, 440, 290);
 		contentPane.add(btnNewButton);
 		setBounds(100, 100, 450, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

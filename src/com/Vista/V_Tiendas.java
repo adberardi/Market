@@ -15,16 +15,18 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.JTextPane;
 
-public class V_BandejaPrincipalCliente extends JFrame {
+public class V_Tiendas extends JFrame {
 
 	public JPanel contentPane;
 	public JComboBox comboBoxBuscar;
-	public JTextField txtBuscar;
 	public JLabel label;
-	public JButton btnNewButton;
-	public JButton btnComprar;
+	public JButton btnEliminar;
+	public JButton btnAgregar;
 	public JTable table;
+	public JButton btnAtras;
+	public JButton btnEditarTienda;
 
 	/**
 	 * Launch the application.
@@ -33,11 +35,11 @@ public class V_BandejaPrincipalCliente extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public V_BandejaPrincipalCliente() {
+	public V_Tiendas() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 778, 431);
 		contentPane = new JPanel();
-		contentPane.setBackground(Color.blue);
+		contentPane.setBackground(Color.BLUE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(null);
 		setContentPane(contentPane);
@@ -47,35 +49,46 @@ public class V_BandejaPrincipalCliente extends JFrame {
 			new Object[][] {
 			},
 			new String[] {
-				"Fecha", "Asunto", "Destinatario"
+				"Nombre", "Lugar"
 			}
 		));
-		table.setBounds(24, 63, 398, 163);
+		table.setBounds(24, 80, 715, 207);
 		contentPane.add(table);
 		
-		btnComprar = new JButton("Comprar");
-		btnComprar.setBounds(34, 238, 130, 23);
-		contentPane.add(btnComprar);
+		btnAgregar = new JButton("Agregar Tienda");
+		btnAgregar.setBounds(41, 345, 156, 23);
+		contentPane.add(btnAgregar);
 		
-		btnNewButton = new JButton("Cancelar");
-		btnNewButton.setBounds(300, 238, 122, 23);
-		contentPane.add(btnNewButton);
+		btnEliminar = new JButton("Eliminar Tienda");
+		btnEliminar.setBounds(235, 345, 156, 23);
+		contentPane.add(btnEliminar);
 		
 		label = new JLabel("Market Venezuela");
 		label.setForeground(Color.WHITE);
 		label.setFont(new Font("Tahoma", Font.BOLD, 14));
-		label.setBounds(149, 12, 156, 14);
+		label.setBounds(378, 12, 156, 14);
 		contentPane.add(label);
 		
-		txtBuscar = new JTextField();
-		txtBuscar.setText("Buscar Solicitud de Compra");
-		txtBuscar.setBounds(24, 32, 193, 23);
-		contentPane.add(txtBuscar);
-		txtBuscar.setColumns(10);
-		
 		comboBoxBuscar = new JComboBox();
-		comboBoxBuscar.setBounds(301, 32, 99, 20);
+		comboBoxBuscar.setBounds(24, 34, 154, 20);
 		contentPane.add(comboBoxBuscar);
+		
+		btnEditarTienda = new JButton("Editar Tienda");
+		btnEditarTienda.setBounds(427, 344, 140, 25);
+		contentPane.add(btnEditarTienda);
+		
+		btnAtras = new JButton("Atras");
+		btnAtras.setBounds(602, 344, 117, 25);
+		contentPane.add(btnAtras);
 	}
-
+	
+	public void mostrarVentana(){
+		setVisible(true);
+		setResizable(false);
+		setTitle("Tienda");
+		setLocationRelativeTo(null);
+		contentPane.setBackground(Color.blue);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 778, 431);
+	}
 }
